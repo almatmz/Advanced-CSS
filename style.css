@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
+}
+.section {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #222;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #222, #444);
+  color: white;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links li {
+  margin-left: 25px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #f39c12;
+}
+
+.card-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.card h3 {
+  margin: 15px 0;
+}
+.card p {
+  flex-grow: 1;
+  padding: 0 15px;
+}
+.card button {
+  margin: 15px;
+  padding: 10px;
+  background: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.card button:hover {
+  background: #d35400;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 12px;
+  height: 400px;
+}
+.grid-header {
+  grid-area: header;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+.grid-sidebar {
+  grid-area: sidebar;
+  background: #bdc3c7;
+  padding: 20px;
+  border-radius: 6px;
+}
+.grid-main {
+  grid-area: main;
+  background: #ecf0f1;
+  padding: 20px;
+  border-radius: 6px;
+}
+.grid-footer {
+  grid-area: footer;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s;
+  aspect-ratio: 7/8;
+  object-fit: cover;
+}
+.gallery-item span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+.gallery-item:hover span {
+  opacity: 1;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.project-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-card button {
+  align-self: flex-start;
+  margin-top: 15px;
+  padding: 8px 15px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.project-card button:hover {
+  background: #1e8449;
+}
+.info {
+  background: #f0f0f0;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
